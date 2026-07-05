@@ -1,0 +1,6 @@
+Replace this folder's contents with real files.
+
+Expected by default:
+- jasper-jessie-resume.pdf (referenced in data/site.ts and data/downloads.ts)
+
+Add more files here + an entry in data/downloads.ts to publish them.
