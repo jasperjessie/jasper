@@ -17,7 +17,7 @@ Open http://localhost:3000
 |---|---|
 | Name, tagline, bio summary, email, social links | `data/site.ts` |
 | Services list | `data/services.ts` |
-| Client logos | `data/clients.ts` + drop image files in `public/logos/` |
+| Career associations (orgs + school engagements) | `data/career.ts` + optional logo files in `public/logos/` |
 | Resources (guides, handouts — not personal docs) | `data/downloads.ts` + drop files in `public/downloads/` |
 | Blog posts | add a new `.mdx` file to `content/blog/` |
 | Full bio page text | `app/bio/page.tsx` |
@@ -45,6 +45,13 @@ It shows up automatically at `/blog/my-post-slug` and on the `/blog` index — n
 2. Add an entry to `data/downloads.ts` pointing at `/downloads/your-file.pdf`.
 
 It shows up on `/resources`. Note: this site intentionally does not publish a resume for direct download — keep personal documents out of `data/downloads.ts`.
+
+### Career association logos
+
+The landing page shows two tiers of associations (defined in `data/career.ts`): organizations worked with directly, and school consulting engagements via Educational Initiatives (Ei). Each entry renders as a monogram tile until you provide a real logo:
+
+1. Drop the image into `public/logos/` (SVG or transparent PNG works best, e.g. `public/logos/amazon.svg`).
+2. Set the `logo` field on that entry in `data/career.ts`, e.g. `{ name: "Amazon", logo: "/logos/amazon.svg" }`.
 
 ### Dark mode
 
