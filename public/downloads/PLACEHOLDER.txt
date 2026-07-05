@@ -1,6 +1,4 @@
-Replace this folder's contents with real files.
+Drop downloadable resources here (guides, frameworks, handouts).
+Personal documents like a resume are intentionally not distributed from this site.
 
-Expected by default:
-- jasper-jessie-resume.pdf (referenced in data/site.ts and data/downloads.ts)
-
-Add more files here + an entry in data/downloads.ts to publish them.
+Add a matching entry in data/downloads.ts to publish a file on the /resources page.

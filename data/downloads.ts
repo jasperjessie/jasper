@@ -5,12 +5,6 @@ export type Downloadable = {
   sizeLabel?: string;
 };
 
-// Drop files into /public/downloads and add an entry here to publish them.
-export const downloads: Downloadable[] = [
-  {
-    title: "Resume",
-    description: "Full resume, updated regularly.",
-    file: "/downloads/jasper-jessie-resume.pdf",
-    sizeLabel: "PDF",
-  },
-];
+// Publish guides, frameworks, or handouts here — not personal documents like a resume.
+// Drop the file into /public/downloads and add an entry below.
+export const downloads: Downloadable[] = [];

@@ -26,7 +26,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
   return (
     <article className="mx-auto max-w-2xl px-6 py-20">
-      <p className="mb-3 text-xs uppercase tracking-wide text-accent">
+      <p className="mb-3 text-xs uppercase tracking-wide text-accent dark:text-gold">
         {new Date(post!.date).toLocaleDateString("en-US", {
           year: "numeric",
           month: "long",
@@ -36,7 +36,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         {post!.readingTime}
       </p>
       <h1 className="mb-8 font-serif text-3xl font-semibold leading-tight">{post!.title}</h1>
-      <div className="prose prose-neutral max-w-none prose-headings:font-serif prose-a:text-accent">
+      <div className="prose prose-neutral max-w-none prose-headings:font-serif prose-a:text-accent dark:prose-invert dark:prose-a:text-gold">
         <MDXRemote source={post!.content} />
       </div>
     </article>

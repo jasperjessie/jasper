@@ -18,7 +18,7 @@ Open http://localhost:3000
 | Name, tagline, bio summary, email, social links | `data/site.ts` |
 | Services list | `data/services.ts` |
 | Client logos | `data/clients.ts` + drop image files in `public/logos/` |
-| Downloads (resume, guides, etc.) | `data/downloads.ts` + drop files in `public/downloads/` |
+| Resources (guides, handouts — not personal docs) | `data/downloads.ts` + drop files in `public/downloads/` |
 | Blog posts | add a new `.mdx` file to `content/blog/` |
 | Full bio page text | `app/bio/page.tsx` |
 
@@ -39,12 +39,16 @@ Write your post in normal Markdown here.
 
 It shows up automatically at `/blog/my-post-slug` and on the `/blog` index — no rebuild step needed beyond a normal git push (Vercel rebuilds on every push).
 
-### Adding a downloadable
+### Adding a downloadable resource
 
 1. Put the file in `public/downloads/your-file.pdf`.
 2. Add an entry to `data/downloads.ts` pointing at `/downloads/your-file.pdf`.
 
-Same pattern for the resume — replace `public/downloads/jasper-jessie-resume.pdf` with your real PDF (same filename, or update the path in `data/site.ts`).
+It shows up on `/resources`. Note: this site intentionally does not publish a resume for direct download — keep personal documents out of `data/downloads.ts`.
+
+### Dark mode
+
+Handled by Tailwind's `class` strategy — toggled via the sun/moon button in the nav (`components/ThemeToggle.tsx`), persisted in `localStorage`, and respects the visitor's OS preference on first visit. No extra setup needed.
 
 ### Contact form
 

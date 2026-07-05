@@ -11,7 +11,7 @@ export default function BlogIndexPage() {
     <section className="mx-auto max-w-5xl px-6 py-20">
       <h1 className="mb-10 font-serif text-3xl font-semibold">Blog</h1>
       {posts.length === 0 ? (
-        <p className="text-ink/60">
+        <p className="text-ink/60 dark:text-paper/60">
           No posts yet. Add an .mdx file to <code>content/blog</code>.
         </p>
       ) : (

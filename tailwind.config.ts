@@ -1,21 +1,26 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
         accent: {
-          DEFAULT: "#B3282D",
-          light: "#D64545",
-          dark: "#8A1F23",
+          DEFAULT: "#1B365D", // navy — primary brand color
+          light: "#2E4E7E",
+          dark: "#122544",
+        },
+        gold: {
+          DEFAULT: "#B08D2B", // secondary accent for highlights/tags
+          light: "#C7A94F",
         },
         ink: "#161616",
         paper: "#FAFAF8",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        serif: ["var(--font-fraunces)", "Georgia", "serif"],
+        serif: ["var(--font-source-serif)", "Georgia", "serif"],
       },
       typography: {
         DEFAULT: {
