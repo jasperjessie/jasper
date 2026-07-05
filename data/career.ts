@@ -3,6 +3,13 @@ export type Association = {
   logo?: string; // optional: drop a file in /public/logos and set e.g. "/logos/amazon.svg"
 };
 
+// Highlighted in the landing-page hero strip — keep this to 3 for impact.
+export const heroHighlights: Association[] = [
+  { name: "Amazon", logo: "/logos/amazon.png" },
+  { name: "Educational Initiatives (Ei)", logo: "/logos/ei.png" },
+  { name: "Teach For India", logo: "/logos/teach-for-india.png" },
+];
+
 // Tier 1 — organizations worked with directly.
 export const directAssociations: Association[] = [
   { name: "Amazon", logo: "/logos/amazon.png" },

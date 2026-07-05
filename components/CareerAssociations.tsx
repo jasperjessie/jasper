@@ -29,13 +29,20 @@ function Monogram({ name, size }: { name: string; size: "lg" | "sm" }) {
 
 function LogoOrMonogram({ a, size }: { a: Association; size: "lg" | "sm" }) {
   if (a.logo) {
+    // White plate keeps dark logos legible on dark-mode card surfaces.
+    if (size === "lg") {
+      return (
+        <span className="flex h-16 w-full items-center justify-center rounded-xl bg-white px-4">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={a.logo} alt={a.name} className="max-h-11 w-auto object-contain" />
+        </span>
+      );
+    }
     return (
-      // eslint-disable-next-line @next/next/no-img-element
-      <img
-        src={a.logo}
-        alt={a.name}
-        className={`${size === "lg" ? "h-12" : "h-7"} w-auto object-contain`}
-      />
+      <span className="flex shrink-0 items-center justify-center rounded-md bg-white px-1.5 py-1">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={a.logo} alt={a.name} className="h-6 w-auto object-contain" />
+      </span>
     );
   }
   return <Monogram name={a.name} size={size} />;

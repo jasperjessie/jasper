@@ -6,4 +6,6 @@ export const site = {
   email: "jasperjessie@gmail.com",
   linkedin: "https://www.linkedin.com/in/jasperjessie",
   github: "https://github.com/jasperjessie",
+  // Set to "/headshot.jpg" once the photo file is placed in /public — hero switches to a split layout automatically.
+  headshot: "",
 };
