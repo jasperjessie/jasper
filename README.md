@@ -16,7 +16,7 @@ Open http://localhost:3000
 | Content | Where to edit |
 |---|---|
 | Name, tagline, bio summary, email, social links | `data/site.ts` |
-| Services list | `data/services.ts` |
+| Services (each a full page) | one `.mdx` file per service in `content/services/` |
 | Career associations (orgs + school engagements) | `data/career.ts` + optional logo files in `public/logos/` |
 | Resources (guides, handouts — not personal docs) | `data/downloads.ts` + drop files in `public/downloads/` |
 | Blog posts | add a new `.mdx` file to `content/blog/` |
@@ -38,6 +38,24 @@ Write your post in normal Markdown here.
 ```
 
 It shows up automatically at `/blog/my-post-slug` and on the `/blog` index — no rebuild step needed beyond a normal git push (Vercel rebuilds on every push).
+
+### Editing or adding a service
+
+Each service is its own page at `/services/<slug>`, sourced from `content/services/<slug>.mdx` — same pattern as blog posts, so it's the same GitHub web-editor workflow.
+
+```mdx
+---
+title: "Curriculum Designing"
+icon: "📚"
+summary: "One-line teaser shown on the Services grid and homepage cards."
+order: 4
+---
+
+Full write-up goes here in normal Markdown — what the service includes, who it's
+for, how an engagement runs, examples if you have them.
+```
+
+`order` controls display order (lower first) — the homepage preview shows whichever 4 services have the lowest `order` values. To add a brand-new service, add a new `.mdx` file here; there's no separate list to update.
 
 ### Adding a downloadable resource
 

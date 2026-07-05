@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { site } from "@/data/site";
-import { services } from "@/data/services";
+import { getAllServices } from "@/lib/services";
 import { getAllPosts } from "@/lib/blog";
 import ServiceCard from "@/components/ServiceCard";
 import BlogCard from "@/components/BlogCard";
@@ -10,6 +10,7 @@ import { heroHighlights } from "@/data/career";
 
 export default function Home() {
   const latestPosts = getAllPosts().slice(0, 2);
+  const services = getAllServices();
   const hasPhoto = Boolean(site.headshot);
 
   return (
@@ -111,7 +112,7 @@ export default function Home() {
         </Reveal>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {services.slice(0, 4).map((s, i) => (
-            <Reveal key={s.title} delay={i * 80}>
+            <Reveal key={s.slug} delay={i * 80}>
               <ServiceCard service={s} />
             </Reveal>
           ))}
