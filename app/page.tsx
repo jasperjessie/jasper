@@ -81,14 +81,15 @@ export default function Home() {
           <div className="flex flex-wrap items-center justify-center gap-x-14 gap-y-6">
             {heroHighlights.map((a) =>
               a.logo ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  key={a.name}
-                  src={a.logo}
-                  alt={a.name}
-                  title={a.name}
-                  className="h-8 w-auto [filter:grayscale(1)_opacity(0.7)] transition duration-300 ease-out hover:[filter:none] dark:[filter:brightness(0)_invert(1)_opacity(0.75)]"
-                />
+                <span key={a.name} className="flex h-10 w-28 items-center justify-center">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={a.logo}
+                    alt={a.name}
+                    title={a.name}
+                    className="max-h-10 max-w-full object-contain [filter:grayscale(1)_opacity(0.7)] transition duration-300 ease-out hover:[filter:none] dark:[filter:brightness(0)_invert(1)_opacity(0.75)]"
+                  />
+                </span>
               ) : null
             )}
           </div>
