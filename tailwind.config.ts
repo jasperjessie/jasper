@@ -7,9 +7,9 @@ const config: Config = {
     extend: {
       colors: {
         accent: {
-          DEFAULT: "#1B365D", // navy — primary brand color
-          light: "#2E4E7E",
-          dark: "#122544",
+          DEFAULT: "#14213D", // deep navy — primary brand color
+          light: "#28395E",
+          dark: "#0B1526",
         },
         gold: {
           DEFAULT: "#B08D2B", // secondary accent for highlights/tags

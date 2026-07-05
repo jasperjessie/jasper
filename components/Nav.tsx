@@ -23,7 +23,7 @@ export default function Nav() {
               <li key={l.href}>
                 <Link
                   href={l.href}
-                  className="text-ink/70 transition hover:text-accent dark:text-paper/70 dark:hover:text-gold"
+                  className="relative pb-1 text-ink/70 transition-colors duration-300 hover:text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-accent after:transition-all after:duration-300 hover:after:w-full dark:text-paper/70 dark:hover:text-gold dark:after:bg-gold"
                 >
                   {l.label}
                 </Link>

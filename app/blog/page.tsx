@@ -1,6 +1,7 @@
 import { getAllPosts } from "@/lib/blog";
 import { site } from "@/data/site";
 import BlogCard from "@/components/BlogCard";
+import Reveal from "@/components/Reveal";
 
 export const metadata = { title: `Blog — ${site.name}` };
 
@@ -16,8 +17,10 @@ export default function BlogIndexPage() {
         </p>
       ) : (
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-          {posts.map((post) => (
-            <BlogCard key={post.slug} post={post} />
+          {posts.map((post, i) => (
+            <Reveal key={post.slug} delay={i * 60}>
+              <BlogCard post={post} />
+            </Reveal>
           ))}
         </div>
       )}

@@ -5,3 +5,20 @@
 html {
   scroll-behavior: smooth;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Subtle topographic contour-line motif — evokes systems/frameworks without competing with content. */
+.bg-topo {
+  background-repeat: repeat;
+  background-size: 300px 200px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Cpath d='M0,40 C50,15 100,65 150,40 C200,15 250,65 300,40' fill='none' stroke='%2314213D' stroke-opacity='0.07' stroke-width='1.4'/%3E%3Cpath d='M0,95 C50,70 100,120 150,95 C200,70 250,120 300,95' fill='none' stroke='%2314213D' stroke-opacity='0.07' stroke-width='1.4'/%3E%3Cpath d='M0,150 C50,125 100,175 150,150 C200,125 250,175 300,150' fill='none' stroke='%2314213D' stroke-opacity='0.07' stroke-width='1.4'/%3E%3C/svg%3E");
+}
+
+.dark .bg-topo {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Cpath d='M0,40 C50,15 100,65 150,40 C200,15 250,65 300,40' fill='none' stroke='%23B08D2B' stroke-opacity='0.1' stroke-width='1.4'/%3E%3Cpath d='M0,95 C50,70 100,120 150,95 C200,70 250,120 300,95' fill='none' stroke='%23B08D2B' stroke-opacity='0.1' stroke-width='1.4'/%3E%3Cpath d='M0,150 C50,125 100,175 150,150 C200,125 250,175 300,150' fill='none' stroke='%23B08D2B' stroke-opacity='0.1' stroke-width='1.4'/%3E%3C/svg%3E");
+}

@@ -56,7 +56,7 @@ export default function CareerAssociations() {
         {directAssociations.map((a) => (
           <div
             key={a.name}
-            className="flex flex-col items-center gap-4 rounded-2xl border border-black/5 bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md dark:border-white/10 dark:bg-white/5"
+            className="flex flex-col items-center gap-4 rounded-2xl border border-black/5 bg-white p-6 text-center shadow-sm transition duration-300 ease-out hover:-translate-y-1 hover:shadow-md dark:border-white/10 dark:bg-white/5"
           >
             <LogoOrMonogram a={a} size="lg" />
             <span className="font-serif text-sm font-medium leading-snug">
