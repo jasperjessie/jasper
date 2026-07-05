@@ -5,16 +5,17 @@ export type Association = {
 
 // Tier 1 — organizations worked with directly.
 export const directAssociations: Association[] = [
-  { name: "Amazon" },
-  { name: "Educational Initiatives (Ei)" },
-  { name: "Teach For India" },
-  { name: "Next Education" },
+  { name: "Amazon", logo: "/logos/amazon.png" },
+  { name: "Educational Initiatives (Ei)", logo: "/logos/ei.png" },
+  { name: "Teach For India", logo: "/logos/teach-for-india.png" },
+  { name: "Next Education", logo: "/logos/next-education.png" },
 ];
 
 // Tier 2 — schools consulted for as part of Educational Initiatives (Ei).
 export const consultingAssociations: Association[] = [
-  { name: "DPS Core Schools, Delhi" },
-  { name: "Global Indian International School" },
-  { name: "Silver Oaks International School" },
-  { name: "Edu-GIRLS" },
+  { name: "Delhi Public School", logo: "/logos/dps.png" },
+  { name: "Global Indian International School", logo: "/logos/giis.png" },
+  { name: "Silver Oaks International School", logo: "/logos/silver-oaks.png" },
+  { name: "Edu-GIRLS", logo: "/logos/edu-girls.png" },
+  { name: "Sri Kumaran Group of Institutions", logo: "/logos/sri-kumaran.png" },
 ];
