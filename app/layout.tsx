@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
@@ -9,6 +9,11 @@ import { site } from "@/data/site";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const sourceSerif = Source_Serif_4({ subsets: ["latin"], variable: "--font-source-serif" });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: `${site.name} — ${site.tagline}`,
@@ -38,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
-      <body className="flex min-h-screen flex-col bg-paper font-sans text-ink transition-colors duration-200 dark:bg-ink dark:text-paper">
+      <body className="flex min-h-screen flex-col overflow-x-hidden bg-paper font-sans text-ink transition-colors duration-200 dark:bg-ink dark:text-paper">
         <ReloadToHome />
         <ScrollToHash />
         <Nav />

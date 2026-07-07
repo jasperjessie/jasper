@@ -9,7 +9,7 @@ export default function BlogIndexPage() {
   const posts = getAllPosts();
 
   return (
-    <section className="mx-auto max-w-5xl px-6 py-20">
+    <section className="mx-auto max-w-5xl px-6 py-12 sm:py-20">
       <h1 className="mb-10 font-serif text-3xl font-semibold">Blog</h1>
       {posts.length === 0 ? (
         <p className="text-ink/60 dark:text-paper/60">

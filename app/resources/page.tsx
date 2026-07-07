@@ -5,7 +5,7 @@ export const metadata = { title: `Resources — ${site.name}` };
 
 export default function ResourcesPage() {
   return (
-    <section className="mx-auto max-w-2xl px-6 py-20">
+    <section className="mx-auto max-w-2xl px-6 py-12 sm:py-20">
       <h1 className="mb-10 font-serif text-3xl font-semibold">Resources</h1>
       {downloads.length === 0 ? (
         <p className="text-ink/60 dark:text-paper/60">

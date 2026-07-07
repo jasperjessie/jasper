@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { site } from "@/data/site";
 import ThemeToggle from "@/components/ThemeToggle";
+import MobileMenu from "@/components/MobileMenu";
 
 const links = [
   { href: "/bio", label: "Bio" },
@@ -13,12 +14,15 @@ const links = [
 export default function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-paper/90 backdrop-blur transition-colors dark:border-white/10 dark:bg-ink/90">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-serif text-lg font-semibold tracking-tight">
+      <nav className="relative mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6">
+        <Link
+          href="/"
+          className="font-serif text-base font-semibold tracking-tight sm:text-lg"
+        >
           {site.name}
         </Link>
-        <div className="flex items-center gap-6">
-          <ul className="flex items-center gap-6 text-sm">
+        <div className="flex items-center gap-2 sm:gap-6">
+          <ul className="hidden items-center gap-6 text-sm md:flex">
             {links.map((l) => (
               <li key={l.href}>
                 <Link
@@ -31,6 +35,7 @@ export default function Nav() {
             ))}
           </ul>
           <ThemeToggle />
+          <MobileMenu links={links} />
         </div>
       </nav>
     </header>

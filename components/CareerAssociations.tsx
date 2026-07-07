@@ -32,9 +32,9 @@ function LogoOrMonogram({ a, size }: { a: Association; size: "lg" | "sm" }) {
     // White plate keeps dark logos legible on dark-mode card surfaces.
     if (size === "lg") {
       return (
-        <span className="flex h-16 w-full items-center justify-center rounded-xl bg-white px-4">
+        <span className="flex h-12 w-full items-center justify-center rounded-xl bg-white px-3 sm:h-16 sm:px-4">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={a.logo} alt={a.name} className="max-h-11 w-auto object-contain" />
+          <img src={a.logo} alt={a.name} className="max-h-8 w-auto object-contain sm:max-h-11" />
         </span>
       );
     }
@@ -50,20 +50,20 @@ function LogoOrMonogram({ a, size }: { a: Association; size: "lg" | "sm" }) {
 
 export default function CareerAssociations() {
   return (
-    <section id="career" className="mx-auto max-w-5xl px-6 pb-20">
+    <section id="career" className="mx-auto max-w-5xl px-6 pb-14 sm:pb-20">
       <p className="mb-2 text-center text-xs font-medium uppercase tracking-widest text-gold">
         Career Associations
       </p>
-      <h2 className="mb-10 text-center font-serif text-2xl font-semibold">
+      <h2 className="mb-8 text-center font-serif text-2xl font-semibold sm:mb-10">
         Organizations I&apos;ve worked with
       </h2>
 
       {/* Tier 1 — direct associations */}
-      <div className="grid grid-cols-2 gap-5 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
         {directAssociations.map((a) => (
           <div
             key={a.name}
-            className="flex flex-col items-center gap-4 rounded-2xl border border-black/5 bg-white p-6 text-center shadow-sm transition duration-300 ease-out hover:-translate-y-1 hover:shadow-md dark:border-white/10 dark:bg-white/5"
+            className="flex flex-col items-center gap-3 rounded-2xl border border-black/5 bg-white p-4 text-center shadow-sm transition duration-300 ease-out hover:-translate-y-1 hover:shadow-md dark:border-white/10 dark:bg-white/5 sm:gap-4 sm:p-6"
           >
             <LogoOrMonogram a={a} size="lg" />
             <span className="font-serif text-sm font-medium leading-snug">

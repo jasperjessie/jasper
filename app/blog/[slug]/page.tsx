@@ -25,7 +25,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <article className="mx-auto max-w-2xl px-6 py-20">
+    <article className="mx-auto max-w-2xl px-6 py-12 sm:py-20">
       <p className="mb-3 text-xs uppercase tracking-wide text-accent dark:text-gold">
         {new Date(post!.date).toLocaleDateString("en-US", {
           year: "numeric",

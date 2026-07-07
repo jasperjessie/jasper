@@ -26,7 +26,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
   }
 
   return (
-    <article className="mx-auto max-w-2xl px-6 py-20">
+    <article className="mx-auto max-w-2xl px-6 py-12 sm:py-20">
       <Link
         href="/services"
         className="mb-8 inline-block text-sm text-accent hover:underline dark:text-gold"

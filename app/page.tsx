@@ -18,9 +18,9 @@ export default function Home() {
       {/* Hero — topographic contour motif, evokes systems/frameworks */}
       <section className="bg-topo w-full">
         <div
-          className={`mx-auto max-w-5xl px-6 pb-14 pt-24 ${
+          className={`mx-auto max-w-5xl px-6 pb-10 pt-14 sm:pb-14 sm:pt-24 ${
             hasPhoto
-              ? "grid items-center gap-12 text-center lg:grid-cols-[3fr,2fr] lg:text-left"
+              ? "grid items-center gap-8 text-center sm:gap-12 lg:grid-cols-[3fr,2fr] lg:text-left"
               : "text-center"
           }`}
         >
@@ -28,7 +28,7 @@ export default function Home() {
             <p className="mb-4 text-sm font-medium uppercase tracking-widest text-accent dark:text-gold">
               {site.tagline}
             </p>
-            <h1 className="mx-auto max-w-3xl font-serif text-4xl font-semibold leading-tight sm:text-5xl">
+            <h1 className="mx-auto max-w-3xl font-serif text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
               {site.name}
             </h1>
             <div
@@ -63,7 +63,7 @@ export default function Home() {
             </div>
           </div>
           {hasPhoto && (
-            <div className="mx-auto w-64 max-w-sm sm:w-72 lg:w-full">
+            <div className="mx-auto w-48 max-w-sm sm:w-64 md:w-72 lg:w-full">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={site.headshot}
@@ -75,20 +75,20 @@ export default function Home() {
         </div>
 
         {/* Brand strip — monochrome for restraint; color returns on hover */}
-        <div className="mx-auto max-w-5xl px-6 pb-16">
-          <p className="mb-6 text-center text-xs font-medium uppercase tracking-widest text-ink/50 dark:text-paper/50">
+        <div className="mx-auto max-w-5xl px-6 pb-10 sm:pb-16">
+          <p className="mb-5 text-center text-xs font-medium uppercase tracking-widest text-ink/50 dark:text-paper/50 sm:mb-6">
             Worked with
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-14 gap-y-6">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-4 sm:gap-x-14 sm:gap-y-6">
             {heroHighlights.map((a) =>
               a.logo ? (
-                <span key={a.name} className="flex h-10 w-28 items-center justify-center">
+                <span key={a.name} className="flex h-9 w-24 items-center justify-center sm:h-10 sm:w-28">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={a.logo}
                     alt={a.name}
                     title={a.name}
-                    className="max-h-10 max-w-full object-contain [filter:grayscale(1)_opacity(0.7)] transition duration-300 ease-out hover:[filter:none] dark:[filter:brightness(0)_invert(1)_opacity(0.75)]"
+                    className="max-h-9 max-w-full object-contain [filter:grayscale(1)_opacity(0.7)] transition duration-300 ease-out hover:[filter:none] dark:[filter:brightness(0)_invert(1)_opacity(0.75)] sm:max-h-10"
                   />
                 </span>
               ) : null
@@ -98,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* Services preview */}
-      <section className="mx-auto max-w-5xl px-6 pb-20 pt-4">
+      <section className="mx-auto max-w-5xl px-6 pb-14 pt-4 sm:pb-20">
         <Reveal>
           <p className="mb-2 text-xs font-medium uppercase tracking-widest text-gold">
             Expertise
@@ -127,7 +127,7 @@ export default function Home() {
       {/* Latest blog posts */}
       {latestPosts.length > 0 && (
         <Reveal className="block">
-          <section className="mx-auto max-w-5xl px-6 pb-20">
+          <section className="mx-auto max-w-5xl px-6 pb-14 sm:pb-20">
             <p className="mb-2 text-xs font-medium uppercase tracking-widest text-gold">
               Insights
             </p>
@@ -148,7 +148,7 @@ export default function Home() {
 
       {/* Contact */}
       <Reveal className="block">
-        <section id="contact" className="mx-auto max-w-2xl px-6 pb-24 text-center">
+        <section id="contact" className="mx-auto max-w-2xl px-6 pb-16 text-center sm:pb-24">
           <p className="mb-2 text-xs font-medium uppercase tracking-widest text-gold">
             Contact
           </p>
