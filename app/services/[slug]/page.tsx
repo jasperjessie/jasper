@@ -5,8 +5,10 @@ import { getAllServiceSlugs, getServiceBySlug } from "@/lib/services";
 import { site } from "@/data/site";
 import ImageRow from "@/components/mdx/ImageRow";
 import ReadingLink from "@/components/mdx/ReadingLink";
+import SELDomainGrid from "@/components/mdx/SELDomainGrid";
+import ScoreBands from "@/components/mdx/ScoreBands";
 
-const mdxComponents = { ImageRow, ReadingLink };
+const mdxComponents = { ImageRow, ReadingLink, SELDomainGrid, ScoreBands };
 
 export function generateStaticParams() {
   return getAllServiceSlugs().map((slug) => ({ slug }));
