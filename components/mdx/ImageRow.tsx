@@ -1,17 +1,9 @@
-type ImageRowItem = { src: string; alt: string };
+import type { ReactNode } from "react";
 
-export default function ImageRow({ images }: { images: ImageRowItem[] }) {
+export default function ImageRow({ children }: { children: ReactNode }) {
   return (
-    <div className="not-prose my-6 flex flex-wrap gap-4">
-      {images.map((img) => (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          key={img.src}
-          src={img.src}
-          alt={img.alt}
-          className="min-w-[260px] flex-1 rounded-lg border border-black/5 object-contain dark:border-white/10"
-        />
-      ))}
+    <div className="not-prose my-6 flex flex-wrap gap-4 [&>img]:min-w-[260px] [&>img]:flex-1 [&>img]:rounded-lg [&>img]:border [&>img]:border-black/5 [&>img]:object-contain dark:[&>img]:border-white/10">
+      {children}
     </div>
   );
 }
