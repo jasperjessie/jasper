@@ -3,6 +3,10 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllServiceSlugs, getServiceBySlug } from "@/lib/services";
 import { site } from "@/data/site";
+import ImageRow from "@/components/mdx/ImageRow";
+import ReadingLink from "@/components/mdx/ReadingLink";
+
+const mdxComponents = { ImageRow, ReadingLink };
 
 export function generateStaticParams() {
   return getAllServiceSlugs().map((slug) => ({ slug }));
@@ -39,7 +43,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
       </h1>
       <p className="mb-8 text-base text-ink/70 dark:text-paper/70">{service!.summary}</p>
       <div className="prose prose-neutral max-w-none prose-headings:font-serif prose-a:text-accent dark:prose-invert dark:prose-a:text-gold">
-        <MDXRemote source={service!.content} />
+        <MDXRemote source={service!.content} components={mdxComponents} />
       </div>
     </article>
   );
