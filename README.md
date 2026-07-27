@@ -39,6 +39,21 @@ Write your post in normal Markdown here.
 
 It shows up automatically at `/blog/my-post-slug` and on the `/blog` index — no rebuild step needed beyond a normal git push (Vercel rebuilds on every push).
 
+### Adding images to a blog post
+
+Two separate steps — the text editor can't upload an image itself, so you upload the file first, then reference it by path.
+
+1. On GitHub, go to `public/blog/` → **Add file → Upload files** → drag in your image (e.g. `my-photo.jpg`) → commit.
+2. Back in your `.mdx` post, reference it with real Markdown image syntax — not the filename alone:
+
+   ```md
+   ![Description of the image](/blog/my-photo.jpg)
+   ```
+
+   The path always starts with `/blog/` followed by whatever you named the file — it maps directly to `public/blog/`.
+
+Note: dragging an image directly into GitHub's `.mdx` text editor also "works," but it uploads to GitHub's own attachment CDN and inserts an external link — the image won't actually live in your repo. The two-step method above keeps everything self-contained and under your control, so it's the one to use.
+
 ### Editing or adding a service
 
 Each service is its own page at `/services/<slug>`, sourced from `content/services/<slug>.mdx` — same pattern as blog posts, so it's the same GitHub web-editor workflow.
