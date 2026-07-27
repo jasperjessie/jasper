@@ -32,10 +32,13 @@ title: "My Post Title"
 date: "2026-07-05"
 excerpt: "One-sentence summary shown on the blog list."
 tags: ["Education", "AI"]
+cover: "/blog/covers/my-post-slug.jpg"
 ---
 
 Write your post in normal Markdown here.
 ```
+
+`cover` is optional — upload the image to `public/blog/covers/` first (same GitHub upload workflow as post images), then reference it. It shows as a full-width banner on the post page and as the thumbnail on blog cards. Omit it and the post just skips straight to the title.
 
 It shows up automatically at `/blog/my-post-slug` and on the `/blog` index — no rebuild step needed beyond a normal git push (Vercel rebuilds on every push).
 

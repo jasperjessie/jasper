@@ -12,6 +12,7 @@ export type PostMeta = {
   excerpt: string;
   tags: string[];
   readingTime: string;
+  cover?: string;
 };
 
 export type Post = PostMeta & { content: string };
@@ -40,6 +41,7 @@ export function getPostBySlug(slug: string): Post {
     excerpt: data.excerpt ?? "",
     tags: data.tags ?? [],
     readingTime: readingTime(content).text,
+    cover: data.cover,
     content,
   };
 }
